@@ -1,0 +1,20 @@
+{{#paper-item class="md-2-line" as |controls|}}
+<img src={{this.image}} alt={{this.name}} class="md-avatar">
+<div class="md-list-item-text">
+    <h3>{{this.name}}</h3>
+    <p>£{{this.price}}</p>
+</div>
+
+
+<div class="md-secondary-container">
+
+    {{paper-input class="flex-30" label="quantity" type="number" value=quantity placeholder="Enter quantity" min="1"
+    onChange=(action (mut quantity))}}
+
+
+    {{#controls.button secondary=true onClick=(action 'addToCart' this.product
+    quantity )}}
+    Add to cart
+    {{/controls.button}}
+</div>
+{{/paper-item}}
