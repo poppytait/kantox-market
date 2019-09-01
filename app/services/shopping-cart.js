@@ -1,5 +1,6 @@
 import { A } from '@ember/array';
 import Service from '@ember/service';
+import { set } from '@ember/object';
 
 export default Service.extend({
     cartItems: null,
@@ -21,9 +22,8 @@ export default Service.extend({
 
         } else {
             const item = this.cartItems.get(index)
-            Ember.set(item, 'quantity', parseInt(quantity) + parseInt(item.quantity))
+            set(item, 'quantity', parseInt(quantity) + parseInt(item.quantity))
         }
-        console.log(this.cartItems)
     },
 
     empty() {

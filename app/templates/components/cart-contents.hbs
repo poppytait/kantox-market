@@ -1,16 +1,4 @@
 {{#each shoppingCart.cartItems as |cartItem|}}
-{{#paper-item class="md-2-line" as |controls|}}
-<img src={{cartItem.product.image}} alt={{cartItem.product.name}} class="md-avatar">
-<div class="md-list-item-text">
-    <h3>{{cartItem.product.name}}</h3>
-    <p>£{{cartItem.product.price}}</p>
-    <p>Quantity: {{cartItem.quantity}}</p>
-</div>
-<div class="md-secondary-container">
-
-    {{#controls.button secondary=true onClick=(action 'removeFromCart' cartItem )}}
-    -
-    {{/controls.button}}
-</div>
-{{/paper-item}}
+<CartItem @cartItem={{cartItem}} />
 {{/each}}
+<p>Subtotal: {{subtotal}} </p>

@@ -10,7 +10,7 @@ export default function () {
           attributes: {
             name: "Green tea",
             price: 3.11,
-            image: "https://www.happycute.shop/media/catalog/product/cache/16/thumbnail/65x/040ec09b1e35df139433887a97daa66f/2/0/20180320_016.jpg"
+            image: "https://cdn-prod.medicalnewstoday.com/content/images/articles/269/269538/green-tea-in-a-cup.jpg"
           }
         },
         {
@@ -19,7 +19,7 @@ export default function () {
           attributes: {
             name: "Strawberries",
             price: 5.00,
-            image: "https://www.happycute.shop/media/catalog/product/cache/16/thumbnail/65x/040ec09b1e35df139433887a97daa66f/2/0/20180320_016.jpg"
+            image: "https://www.besthealthmag.ca/wp-content/uploads/sites/16/2018/12/benefits-of-strawberries-strawberry-benefits-7.jpg"
           }
         },
         {
@@ -28,7 +28,7 @@ export default function () {
           attributes: {
             name: "Coffee",
             price: 11.23,
-            image: "https://www.happycute.shop/media/catalog/product/cache/16/thumbnail/65x/040ec09b1e35df139433887a97daa66f/2/0/20180320_016.jpg"
+            image: "https://athome.starbucks.com/sites/site.prod.athome.starbucks.com/files/2019-06/CoffeeFinder_ArticleHeader_Desktop_1176x712.jpg"
           }
         }
       ]
