@@ -1,6 +1,6 @@
 export default class Discount {
     isEligible() {
-        throw new Error('You have to implement the method doSomething!');
+        throw new Error('You have to implement the method isEligible!');
     }
     calculate(cart) {
         const eligible = this.isEligible(cart)
