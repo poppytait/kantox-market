@@ -1,4 +1,4 @@
-import Discount from './discount'
+import Discount from './Discount'
 
 class StrawberryDiscount extends Discount {
     isEligible(cart) {
@@ -8,7 +8,7 @@ class StrawberryDiscount extends Discount {
     calculateDiscount(cart) {
         const { quantity, product: { price } } = cart.find(item => item.product.id === 2)
 
-        return quantity >= 3 ? price === 4.5 : price === 5
+        return (price - 4.5) * quantity
     }
 }
 

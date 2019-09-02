@@ -8,7 +8,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
         const cart = [
             {
                 product: {
-                    price: 3.11,
+                    price: 5,
                     id: 2
                 },
                 quantity: 3,
@@ -18,5 +18,56 @@ module('Unit | Discounts | StrawberryDiscount', function () {
         const eligible = StrawberryDiscount.isEligible(cart);
 
         assert.equal(eligible, true);
+    });
+
+    test('should return false when cart has only 1 strawberry', function (assert) {
+
+        const cart = [
+            {
+                product: {
+                    price: 5,
+                    id: 2
+                },
+                quantity: 1,
+            },
+        ]
+
+        const eligible = StrawberryDiscount.isEligible(cart);
+
+        assert.equal(eligible, false);
+    });
+
+    test('should return correct discount', function (assert) {
+
+        const cart = [
+            {
+                product: {
+                    price: 5,
+                    id: 2
+                },
+                quantity: 4,
+            },
+        ]
+
+        const discount = StrawberryDiscount.calculateDiscount(cart);
+
+        assert.equal(discount, 2);
+    });
+
+    test('should return correct discount', function (assert) {
+
+        const cart = [
+            {
+                product: {
+                    price: 5,
+                    id: 2
+                },
+                quantity: 6,
+            },
+        ]
+
+        const discount = StrawberryDiscount.calculateDiscount(cart);
+
+        assert.equal(discount, 3);
     });
 });

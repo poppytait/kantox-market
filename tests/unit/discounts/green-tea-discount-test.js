@@ -53,4 +53,21 @@ module('Unit | Discounts | GreenTeaDiscount', function () {
 
         assert.equal(discount, 6.22);
     });
+
+    test('should return correct discount', function (assert) {
+
+        const cart = [
+            {
+                product: {
+                    price: 3.11,
+                    id: 1
+                },
+                quantity: 10,
+            },
+        ]
+
+        const discount = GreenTeaDiscount.calculateDiscount(cart);
+
+        assert.equal(discount, 15.65);
+    });
 });
