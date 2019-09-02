@@ -1,23 +1,21 @@
-
-
 <div class="layout-row layout-xs-column ">
   <div class="layout-column flex-xs flex-gt-xs-50">
     {{#paper-card as |card|}}
     {{#card.title as |title|}}
-        {{#title.text as |text|}}
-          {{#text.headline}}{{this.name}}{{/text.headline}}
-          {{#text.subhead}}£{{this.price}}{{/text.subhead}}
-        {{/title.text}}
-       {{title.media size="sm" src="https://i.pinimg.com/originals/63/14/97/6314973a7d042ffaa29a0aa81890ccf0.jpg"}}
-      {{/card.title}}
+    {{#title.text as |text|}}
+    {{#text.headline}}{{this.name}}{{/text.headline}}
+    {{#text.subhead}}£{{this.price}}{{/text.subhead}}
+    {{/title.text}}
+    {{title.media size="sm" src=this.image}}
+    {{/card.title}}
 
-      {{#card.actions class="action-container"}}
-        {{paper-input class="flex-20 action-container__input" label="quantity" type="number" value=quantity  min="1"
-                      onChange=(action (mut quantity))}}
-        {{#paper-button class="action-container__button" raised=true onClick=(action 'addToCart' this.product quantity )}}
-            Add to cart
-        {{/paper-button}}
-      {{/card.actions}}
+    {{#card.actions class="action-container"}}
+    {{paper-input class="flex-20 action-container__input" label="quantity" type="number" value=quantity min="1"
+    onChange=(action (mut quantity))}}
+    {{#paper-button class="action-container__button" raised=true onClick=(action 'addToCart' this.product quantity )}}
+    Add to cart
+    {{/paper-button}}
+    {{/card.actions}}
     {{/paper-card}}
-</div>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 {{#each shoppingCart.cartItems as |cartItem|}}
-    <CartItem @cartItem={{cartItem}} />
+<CartItem @cartItem={{cartItem}} />
 {{/each}}
 
+<p>Discounts: {{discountAmount}} </p>
 <p>Subtotal: {{subtotal}} </p>

@@ -4,8 +4,7 @@ export default class Discount {
     }
     calculate(cart) {
         const eligible = this.isEligible(cart)
-
-        return eligible ? this.calculateDiscount() : 0
+        return eligible ? this.calculateDiscount(cart) : 0
     }
 
     calculateDiscount() {

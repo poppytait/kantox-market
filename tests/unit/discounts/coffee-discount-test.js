@@ -3,7 +3,7 @@ import CoffeeDiscount from 'kantox-market/discounts/CoffeeDiscount'
 
 module('Unit | Discounts | CoffeeDiscount', function () {
 
-    test('should return true when cart contains 3+ coffees', function (assert) {
+    test('should return true when cart contains 2+ coffees', function (assert) {
 
         const cart = [
             {
@@ -11,7 +11,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
                     price: 11.23,
                     id: 3
                 },
-                quantity: 3,
+                quantity: 2,
             },
         ]
 
