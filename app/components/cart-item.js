@@ -1,5 +1,6 @@
-import Component from '@ember/component';
-import { inject as service } from '@ember/service';
+import Component from '@ember/component'
+import { inject as service } from '@ember/service'
+import GreenTeaDiscount from '../discounts/GreenTeaDiscount'
 
 
 export default Component.extend({
@@ -11,4 +12,5 @@ export default Component.extend({
             this.shoppingCart.remove(product)
         }
     }
+
 });

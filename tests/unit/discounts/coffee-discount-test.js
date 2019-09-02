@@ -51,7 +51,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
 
         const discount = CoffeeDiscount.calculateDiscount(cart);
 
-        assert.equal(discount, 18.71);
+        assert.equal(discount, 18.72);
     });
 
     test('should return correct discount', function (assert) {
@@ -68,6 +68,6 @@ module('Unit | Discounts | CoffeeDiscount', function () {
 
         const discount = CoffeeDiscount.calculateDiscount(cart);
 
-        assert.equal(discount, 29.94);
+        assert.equal(discount, 29.95);
     });
 });

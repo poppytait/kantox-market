@@ -19,7 +19,7 @@ export default function () {
           attributes: {
             name: "Strawberries",
             price: 5.00,
-            image: "https://www.besthealthmag.ca/wp-content/uploads/sites/16/2018/12/benefits-of-strawberries-strawberry-benefits-7.jpg"
+            image: "https://www.whatchefswant.com/wp-content/uploads/2019/02/strawberries.jpg"
           }
         },
         {

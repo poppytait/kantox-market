@@ -2,5 +2,12 @@
 {{#paper-subheader}}Products{{/paper-subheader}}
 {{#each this.model as |product|}}
 <Product @product={{product}} @name={{product.name}} @image={{product.image}} @price={{product.price}} />
+<CartCard @product={{product}} @name={{product.name}} @image={{product.image}} @price={{product.price}} />
 {{/each}}
 {{/paper-list}}
+
+
+
+
+
+

@@ -1,2 +1,14 @@
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
 
+    &__input {
+        height: 25px;
+    }
+
+    &__button {
+       
+    }
+}
 /*# sourceMappingURL=style.scss.map */
