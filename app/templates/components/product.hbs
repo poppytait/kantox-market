@@ -11,10 +11,10 @@
     {{paper-input class="flex-25" label="quantity" type="number" value=quantity placeholder="Enter quantity" min="1"
     onChange=(action (mut quantity))}}
 
-    {{#controls.button raised=true mini=true onClick=(action 'addToCart' this.product
+    {{#paper-button onClick=(action 'addToCart' this.product
     quantity )}}
     Add
-    {{/controls.button}}
+    {{/paper-button}}
 </div> 
 
 {{/paper-item}} 

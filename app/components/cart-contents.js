@@ -6,6 +6,7 @@ export default Component.extend({
     originalTotal: 0,
     discountAmount: 0,
     subtotal: 0,
+    
     shoppingCart: service(),
     totalCalculator: service(),
 

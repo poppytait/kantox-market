@@ -1,15 +1,18 @@
+
+<div class="cart-item__container">
 {{#paper-item class="md-2-line" as |controls|}}
 <img src={{this.cartItem.product.image}} alt={{this.cartItem.product.name}} class="md-avatar">
 <div class="md-list-item-text">
     <h3>{{this.cartItem.product.name}}</h3>
     <p>Individual price: £{{this.cartItem.product.price}}</p>
     <p>Quantity: {{this.cartItem.quantity}}</p>
-    <p>You saved: DISCOUNT</p>
 </div>
 <div class="md-secondary-container">
-
-    {{#controls.button secondary=true onClick=(action 'removeFromCart' cartItem )}}
-    -
-    {{/controls.button}}
+    {{#paper-button raised=true onClick=(action 'removeFromCart' cartItem )}}
+    remove
+    {{/paper-button}}
 </div>
 {{/paper-item}}
+</div>
+
+  

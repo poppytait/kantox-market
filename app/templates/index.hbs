@@ -1,6 +1,6 @@
 {{#paper-list}}
 {{#paper-subheader}}Products{{/paper-subheader}}
 {{#each this.model as |product|}}
-<CartCard @product={{product}} @name={{product.name}} @image={{product.image}} @price={{product.price}} />
+<ItemCard @product={{product}} @name={{product.name}} @image={{product.image}} @price={{product.price}} />
 {{/each}}
 {{/paper-list}}
