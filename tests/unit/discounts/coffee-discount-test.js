@@ -3,15 +3,15 @@ import CoffeeDiscount from 'kantox-market/discounts/CoffeeDiscount'
 
 module('Unit | Discounts | CoffeeDiscount', function () {
 
-    test('should return true when cart contains 2+ coffees', function (assert) {
+    test('should return true when cart contains 3+ coffees', function (assert) {
 
         const cart = [
             {
                 product: {
                     price: 11.23,
-                    id: 3
+                    id: "3"
                 },
-                quantity: 2,
+                quantity: 3,
             },
         ]
 
@@ -26,7 +26,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
             {
                 product: {
                     price: 11.23,
-                    id: 3
+                    id: "3"
                 },
                 quantity: 1,
             },
@@ -43,15 +43,15 @@ module('Unit | Discounts | CoffeeDiscount', function () {
             {
                 product: {
                     price: 11.23,
-                    id: 3
+                    id: "3"
                 },
-                quantity: 5,
+                quantity: 3,
             },
         ]
 
         const discount = CoffeeDiscount.calculateDiscount(cart);
 
-        assert.equal(discount, 18.72);
+        assert.equal(discount, 11.23);
     });
 
     test('should return correct discount', function (assert) {
@@ -60,14 +60,14 @@ module('Unit | Discounts | CoffeeDiscount', function () {
             {
                 product: {
                     price: 11.23,
-                    id: 3
+                    id: "3"
                 },
-                quantity: 8,
+                quantity: 6,
             },
         ]
 
         const discount = CoffeeDiscount.calculateDiscount(cart);
 
-        assert.equal(discount, 29.95);
+        assert.equal(discount, 22.46);
     });
 });

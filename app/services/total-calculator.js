@@ -1,5 +1,4 @@
 import Service from '@ember/service';
-import DiscountManager from 'kantox-market/discounts/DiscountManager'
 
 function calculateSubtotal(cart) {
     return cart.map(item => item.product.price * item.quantity)
@@ -7,8 +6,6 @@ function calculateSubtotal(cart) {
 }
 
 export default Service.extend({
-    total: 0,
-    appliedDiscount: 0,
 
     calculate(cart) {
         return calculateSubtotal(cart)

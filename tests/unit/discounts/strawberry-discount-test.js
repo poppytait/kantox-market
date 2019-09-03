@@ -9,7 +9,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
             {
                 product: {
                     price: 5,
-                    id: 2
+                    id: "2"
                 },
                 quantity: 3,
             },
@@ -26,7 +26,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
             {
                 product: {
                     price: 5,
-                    id: 2
+                    id: "2"
                 },
                 quantity: 1,
             },
@@ -43,7 +43,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
             {
                 product: {
                     price: 5,
-                    id: 2
+                    id: "2"
                 },
                 quantity: 4,
             },
@@ -60,7 +60,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
             {
                 product: {
                     price: 5,
-                    id: 2
+                    id: "2"
                 },
                 quantity: 6,
             },

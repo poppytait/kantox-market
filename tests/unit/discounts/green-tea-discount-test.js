@@ -9,7 +9,7 @@ module('Unit | Discounts | GreenTeaDiscount', function () {
             {
                 product: {
                     price: 3.11,
-                    id: 1
+                    id: "1"
                 },
                 quantity: 3,
             },
@@ -26,7 +26,7 @@ module('Unit | Discounts | GreenTeaDiscount', function () {
             {
                 product: {
                     price: 3.11,
-                    id: 1
+                    id: "1"
                 },
                 quantity: 1,
             },
@@ -43,7 +43,7 @@ module('Unit | Discounts | GreenTeaDiscount', function () {
             {
                 product: {
                     price: 3.11,
-                    id: 1
+                    id: "1"
                 },
                 quantity: 5,
             },
@@ -60,14 +60,14 @@ module('Unit | Discounts | GreenTeaDiscount', function () {
             {
                 product: {
                     price: 3.11,
-                    id: 1
+                    id: "1"
                 },
-                quantity: 10,
+                quantity: 8,
             },
         ]
 
         const discount = GreenTeaDiscount.calculateDiscount(cart);
 
-        assert.equal(discount, 15.65);
+        assert.equal(discount, 12.44);
     });
 });

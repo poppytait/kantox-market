@@ -2,7 +2,7 @@
 
 <div class="shopping-cart">
   {{#each shoppingCart.cartItems as |cartItem|}}
-  <CartItem @cartItem={{cartItem}} />
+    <CartItem @cartItem={{cartItem}} />
   {{/each}}
   <CartTotals @subtotal={{subtotal}} @discountAmount={{discountAmount}} @grandTotal={{grandTotal}} />
 </div>
