@@ -1,25 +1,8 @@
+{{#paper-subheader}}Shopping Cart{{/paper-subheader}}
+
 <div class="shopping-cart">
-    <h1 class="shopping-cart__header">Shopping Cart</h1>
-{{#each shoppingCart.cartItems as |cartItem|}}
-<CartItem @cartItem={{cartItem}} />
-{{/each}}
-
-
-<div class="shopping-cart__totals">
-    <div class="shopping-cart__totals-item">
-      <label>Subtotal</label>
-      <div class="shopping-cart__totals-value">--</div>
-    </div>
-    <div class="shopping-cart__totals-item">
-      <label>Discount saving</label>
-      <div class="shopping-cart__totals-value">{{discountAmount}}</div>
-    </div>
-    <div class="shopping-cart__totals-item shopping-cart__totals-item--grand-total">
-      <label>Grand Total</label>
-      <div class="shopping-cart__totals-value">{{subtotal}}</div>
-    </div>
-  </div>
-      
-    {{#paper-button raised=true class="checkout"}}Checkout{{/paper-button}}
-
+  {{#each shoppingCart.cartItems as |cartItem|}}
+  <CartItem @cartItem={{cartItem}} />
+  {{/each}}
+  <CartTotals @subtotal={{subtotal}} @discountAmount={{discountAmount}} @grandTotal={{grandTotal}} />
 </div>

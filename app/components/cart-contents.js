@@ -3,20 +3,21 @@ import { inject as service } from '@ember/service';
 import DiscountManager from 'kantox-market/discounts/DiscountManager'
 
 export default Component.extend({
-    originalTotal: 0,
-    discountAmount: 0,
     subtotal: 0,
-    
+    discountAmount: 0,
+    grandTotal: 0,
+
     shoppingCart: service(),
     totalCalculator: service(),
 
     didRender() {
         this._super(...arguments);
-        const total = this.totalCalculator.calculate(this.shoppingCart.cartItems)
+        const subtotal = this.totalCalculator.calculate(this.shoppingCart.cartItems)
         const discountAmount = DiscountManager.apply(this.shoppingCart.cartItems)
+        const grandTotal = subtotal - discountAmount
 
-        this.set('originalTotal', total)
-        this.set('discountAmount', discountAmount)
-        this.set('subtotal', total - discountAmount)
+        this.set('subtotal', subtotal.toFixed(2))
+        this.set('discountAmount', discountAmount.toFixed(2))
+        this.set('grandTotal', grandTotal.toFixed(2))
     }
 });

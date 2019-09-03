@@ -14,7 +14,6 @@ export default Service.extend({
     update(product, quantity) {
         const index = this.cartItems.findIndex(cartItem => cartItem.product.id === product.id)
 
-
         if (index === -1) {
             this.cartItems.pushObject({
                 product,
@@ -23,7 +22,13 @@ export default Service.extend({
 
         } else {
             const item = this.cartItems.get(index)
-            set(item, 'quantity', parseInt(quantity) + parseInt(item.quantity))
+            const newQuantity = parseInt(quantity) + parseInt(item.quantity)
+
+            if (newQuantity === 0) {
+                this.cartItems.removeAt(index)
+            } else {
+                set(item, 'quantity', newQuantity)
+            }
         }
     },
 

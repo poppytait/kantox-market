@@ -7,9 +7,12 @@ export default Component.extend({
     shoppingCart: service(),
 
     actions: {
-        removeFromCart(product) {
-            this.shoppingCart.remove(product)
-        }
+        incrementQuantity(cartItem) {
+            this.shoppingCart.update(cartItem.product, 1)
+        },
+        decrementQuantity(cartItem) {
+            this.shoppingCart.update(cartItem.product, -1)
+        },
     }
 
 });

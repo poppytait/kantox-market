@@ -1,18 +1,17 @@
-
 <div class="cart-item__container">
-{{#paper-item class="md-2-line" as |controls|}}
-<img src={{this.cartItem.product.image}} alt={{this.cartItem.product.name}} class="md-avatar">
-<div class="md-list-item-text">
-    <h3>{{this.cartItem.product.name}}</h3>
-    <p>Individual price: £{{this.cartItem.product.price}}</p>
-    <p>Quantity: {{this.cartItem.quantity}}</p>
+    {{#paper-item class="md-2-line" as |controls|}}
+    <img src={{this.cartItem.product.image}} alt={{this.cartItem.product.name}} class="md-avatar">
+    <div class="md-list-item-text">
+        <h3>{{this.cartItem.product.name}}</h3>
+        <p>Individual price: £{{this.cartItem.product.price}}</p>
+        <p>Quantity: {{this.cartItem.quantity}}</p>
+    </div>
+    <div class="md-secondary-container">
+        {{#paper-button raised=true mini=true primary=true
+        onClick=(action 'decrementQuantity' this.cartItem )}}-{{/paper-button}}
+        <p>{{ this.cartItem.quantity}}</p>
+        {{#paper-button raised=true mini=true primary=true onClick=(action 'incrementQuantity' this.cartItem )
+        }}+{{/paper-button}}
+    </div>
+    {{/paper-item}}
 </div>
-<div class="md-secondary-container">
-    {{#paper-button raised=true onClick=(action 'removeFromCart' cartItem )}}
-    remove
-    {{/paper-button}}
-</div>
-{{/paper-item}}
-</div>
-
-  
