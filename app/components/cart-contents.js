@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import DiscountManager from 'kantox-market/discounts/DiscountManager'
+import calculateTotal from 'kantox-market/helpers/total-calculator'
 
 export default Component.extend({
     subtotal: 0,
@@ -8,11 +9,10 @@ export default Component.extend({
     grandTotal: 0,
 
     shoppingCart: service(),
-    totalCalculator: service(),
 
     didRender() {
         this._super(...arguments);
-        const subtotal = this.totalCalculator.calculate(this.shoppingCart.cartItems)
+        const subtotal = calculateTotal(this.shoppingCart.cartItems)
         const discountAmount = DiscountManager.apply(this.shoppingCart.cartItems)
         const grandTotal = subtotal - discountAmount
 
