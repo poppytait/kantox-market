@@ -1,6 +1,7 @@
 # kantox-market
 
 A shopping cart web app that calculates appropriate discounts at checkout.
+
 ![checkout screenshot](https://i.ibb.co/YT47j71/Screenshot-2019-09-04-at-21-28-00.png)
 
 ## Prerequisites
