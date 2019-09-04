@@ -3,7 +3,7 @@ import StrawberryDiscount from 'kantox-market/discounts/StrawberryDiscount'
 
 module('Unit | Discounts | StrawberryDiscount', function () {
 
-    test('should return true when cart contains 3+ strawberries', function (assert) {
+    test('it should return true when cart contains 3+ strawberries', function (assert) {
 
         const cart = [
             {
@@ -20,7 +20,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
         assert.equal(eligible, true);
     });
 
-    test('should return false when cart has only 1 strawberry', function (assert) {
+    test('it should return false when cart has only 1 strawberry', function (assert) {
 
         const cart = [
             {
@@ -37,7 +37,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
         assert.equal(eligible, false);
     });
 
-    test('should return correct discount', function (assert) {
+    test('it should return correct discount', function (assert) {
 
         const cart = [
             {
@@ -54,7 +54,7 @@ module('Unit | Discounts | StrawberryDiscount', function () {
         assert.equal(discount, 2);
     });
 
-    test('should return correct discount', function (assert) {
+    test('it should return correct discount', function (assert) {
 
         const cart = [
             {

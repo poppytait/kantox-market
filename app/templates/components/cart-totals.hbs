@@ -12,4 +12,4 @@
     <div class="shopping-cart__totals-value">{{this.grandTotal}}</div>
   </div>
 </div>
-{{#paper-button raised=true class="checkout"}}Checkout{{/paper-button}}
+{{#paper-button raised=true class="checkout" primary=true onClick=(action "checkout")}}Checkout{{/paper-button}}

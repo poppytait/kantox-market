@@ -3,7 +3,7 @@ import DiscountManager from 'kantox-market/discounts/DiscountManager'
 
 module('Unit | Discounts | DiscountManager', function () {
 
-    test('should return 0 when no discounts apply', function (assert) {
+    test('it should return 0 when no discounts apply', function (assert) {
 
         const cart = [
             {
@@ -34,7 +34,7 @@ module('Unit | Discounts | DiscountManager', function () {
         assert.equal(discount, 0);
     });
 
-    test('should return correct sum of discounts', function (assert) {
+    test('it should return correct sum of discounts', function (assert) {
 
         const cart = [
             {

@@ -2,7 +2,6 @@ import { A } from '@ember/array';
 import Service from '@ember/service';
 import { set } from '@ember/object';
 
-
 export default Service.extend({
     cartItems: null,
 
@@ -24,7 +23,7 @@ export default Service.extend({
             const item = this.cartItems.get(index)
             const newQuantity = parseInt(quantity) + parseInt(item.quantity)
 
-            if (newQuantity === 0) {
+            if (newQuantity <= 1) {
                 this.cartItems.removeAt(index)
             } else {
                 set(item, 'quantity', newQuantity)
@@ -32,7 +31,8 @@ export default Service.extend({
         }
     },
 
-    empty() {
+    // Meant to simulate a checkout as in real life the cart would be cleared upon checkout
+    checkout() {
         this.cartItems.clear();
     }
 });

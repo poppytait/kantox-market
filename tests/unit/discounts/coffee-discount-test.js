@@ -3,7 +3,7 @@ import CoffeeDiscount from 'kantox-market/discounts/CoffeeDiscount'
 
 module('Unit | Discounts | CoffeeDiscount', function () {
 
-    test('should return true when cart contains 3+ coffees', function (assert) {
+    test('it should return true when cart contains 3+ coffees', function (assert) {
 
         const cart = [
             {
@@ -20,7 +20,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
         assert.equal(eligible, true);
     });
 
-    test('should return false when cart has only 1 coffee', function (assert) {
+    test('it should return false when cart has only 1 coffee', function (assert) {
 
         const cart = [
             {
@@ -37,7 +37,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
         assert.equal(eligible, false);
     });
 
-    test('should return correct discount', function (assert) {
+    test('it should return correct discount', function (assert) {
 
         const cart = [
             {
@@ -54,7 +54,7 @@ module('Unit | Discounts | CoffeeDiscount', function () {
         assert.equal(discount, 11.23);
     });
 
-    test('should return correct discount', function (assert) {
+    test('it should return correct discount', function (assert) {
 
         const cart = [
             {

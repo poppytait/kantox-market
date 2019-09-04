@@ -1,16 +1,15 @@
 
 $color-label: #aaa;
-$font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 $color-pink: #F4C2C2;
 $color-darker-pink: #F4C2DB;
+$color-light-gray: #dfeaf5;
 
 
 .cart-item {
     &__container {
       padding: 20px 0;
       margin: 10px 0;
-      border-bottom: 1px solid #dfeaf5;
+      border-bottom: 1px solid $color-light-gray;
     }
 }
 
@@ -32,7 +31,7 @@ $color-darker-pink: #F4C2DB;
     margin-bottom: 10px;
 
     &--grand-total {
-      font-family: $font-bold;
+      font-weight: 600;
     }
   }
 
@@ -52,11 +51,6 @@ $color-darker-pink: #F4C2DB;
 .checkout {
   float: right;
   padding: 0 20px;
-  // margin-top: 20px;
-  // padding: 6px 10px;
-  // background-color: $color-pink;
-  // color: #fff;
-  // font-size: 20px;
 }
 
 .checkout:hover {
