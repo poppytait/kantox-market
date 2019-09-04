@@ -8,7 +8,6 @@ const discounts = [
     CoffeeDiscount
 ]
 
-
 const DiscountManager = class DiscountManager {
     constructor(discounts) {
         this.discounts = discounts;

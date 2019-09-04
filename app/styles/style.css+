@@ -11,11 +11,6 @@
     width: 79%;
     text-align: right;
     color: #aaa; }
-  .shopping-cart__header {
-    font-weight: 100;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-    border-bottom: 1px solid #dfeaf5; }
   .shopping-cart__totals-item {
     float: right;
     clear: both;
